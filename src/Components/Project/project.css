@@ -1,0 +1,122 @@
+.projects-cont {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.projects-box {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+}
+
+.project-card {
+    max-width: 400px;
+    background-color: var(--bg);
+    color: white;
+    border: 2px solid var(--blue1);
+    border-radius: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0 5px 10px var(--blue3);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    transition: all 0.3s ease;
+
+    p {
+        color: var(--desc-color);
+    }
+}
+
+.project-img {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    background: var(--bg);
+    margin-bottom: 20px;
+
+    transition: all 0.3s ease;
+}
+
+.text-project {
+    padding: 8px 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.active-btn {
+    padding: 12px 22px;
+    border: 0;
+    background: var(--btn-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--blue3);
+
+    color: azure;
+    font-weight: bolder;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.unactive-btn {
+    background: transparent;
+    border: 1.5px solid #3b82f6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: default;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .projects-box {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-card {
+        max-width: 90%;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .project-card:hover {
+    box-shadow: 0 0px 50px var(--blue4);
+  }
+
+  .project-card:hover .project-img {
+    transform: scale(1.05);
+  }
+
+  .active-btn:hover {
+    box-shadow: 0 5px 8px var(--blue4);
+    transform: translateY(-3px);
+  }
+
+  .unactive-btn:hover {
+    color: red;
+    border: 1.5px solid red;
+  }
+}
