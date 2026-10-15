@@ -13,7 +13,7 @@
     left: 0;
     z-index: 999;
 
-    animation: fadeIn  0.4s ease;
+    animation: fadeIn  0.7s ease;
 
     .modal {
         width: 90%;
