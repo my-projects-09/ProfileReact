@@ -40,7 +40,9 @@ export function Projects() {
                         </div>
 
                         <a className={` ${project.isReady === true ? ' active-btn' : ' unactive-btn'}`} 
-                            href={project.link} target="_blank" rel="noopener noreferrer"
+                            href={project.link !== '' ? project.link : undefined} target="_blank" 
+                            rel="noopener noreferrer"
+                            target="_blank" rel="noopener noreferrer"
                         >
                             {project.isReady === true ? 'View project' : 'coming soon'}
                         </a>
